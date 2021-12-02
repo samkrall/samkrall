@@ -1,0 +1,23 @@
+#subtract individual from average and square the result, add together results and divide by n, take square root
+
+#list of values
+mylist = [12, 89, 54]
+
+#get average by dividing sum or list by n
+average = sum(mylist)/len(mylist)
+
+#create number and set to zero,  iteratively add to it for each number subtracted from average and squared
+total_square_average = 0
+
+#number is individual place holder, can set this value to anything
+for number in mylist:
+  individual_square_average = ((number-average)**2)
+
+  #iteratively add
+  total_square_average = total_square_average + individual_square_average
+
+variance = total_square_average / len(mylist)
+
+std_dev = variance**(1/2)
+
+print(std_dev)
