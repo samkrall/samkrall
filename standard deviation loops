@@ -1,0 +1,29 @@
+#one way
+
+def calculate_stddev (mylist):
+  if type(mylist) is not list:
+    print('object is not a list')
+    return
+  else:
+    pass
+
+  listaverage = sum(mylist)/len(mylist)
+  newlist = []
+  for x in mylist:
+    squared_difference = (listaverage-x)**2
+    newlist.append(squared_difference)
+  std_dev = (sum(newlist)/len(mylist))**(1/2)
+  print(std_dev)
+
+
+#second way
+
+def calc_stddev (stats):
+
+  average = sum(stats)/len(stats)
+
+  squared = [(x-average)**2 for x in stats]
+
+  std_dev = (sum(squared)/len(stats))**(1/2)
+
+  return std_dev
